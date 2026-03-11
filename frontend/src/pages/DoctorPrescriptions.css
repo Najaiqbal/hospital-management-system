@@ -1,0 +1,94 @@
+/* Main container */
+
+.doctor-prescription-container{
+padding:30px;
+background:#f4f8fb;
+min-height:100vh;
+}
+
+/* Title */
+
+.doctor-prescription-title{
+font-size:28px;
+font-weight:600;
+margin-bottom:25px;
+color:#1e293b;
+}
+
+/* Grid layout */
+
+.doctor-prescription-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+/* Prescription card */
+
+.doctor-prescription-card{
+background:white;
+border-radius:14px;
+padding:22px;
+border:1px solid #e5e7eb;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+transition:0.25s;
+position:relative;
+}
+
+/* Hover effect */
+
+.doctor-prescription-card:hover{
+transform:translateY(-6px);
+box-shadow:0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* Header */
+
+.doctor-prescription-header{
+border-bottom:1px solid #e5e7eb;
+padding-bottom:10px;
+margin-bottom:15px;
+}
+
+.doctor-prescription-header h3{
+font-size:18px;
+color:#1f2937;
+}
+
+/* Body text */
+
+.doctor-prescription-body p{
+margin:8px 0;
+font-size:14px;
+color:#374151;
+}
+
+.doctor-prescription-body span{
+font-weight:600;
+color:#111827;
+}
+
+/* Empty message */
+
+.doctor-no-prescription{
+font-size:16px;
+color:#6b7280;
+}
+
+/* Responsive */
+
+@media (max-width:900px){
+
+.doctor-prescription-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media (max-width:600px){
+
+.doctor-prescription-grid{
+grid-template-columns:1fr;
+}
+
+}

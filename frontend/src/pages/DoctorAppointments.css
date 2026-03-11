@@ -1,0 +1,132 @@
+.doctor-appointments-container{
+padding:30px;
+}
+
+.doctor-appointments-title{
+font-size:28px;
+margin-bottom:25px;
+color:#1f2937;
+}
+
+.doctor-appointments-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+/* card */
+
+.doctor-appointment-card{
+background:white;
+border-radius:12px;
+padding:20px;
+border:1px solid #e5e7eb;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+transition:0.2s;
+}
+
+.doctor-appointment-card:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+.doctor-appointment-card h3{
+margin-bottom:10px;
+}
+
+.doctor-appointment-card p{
+margin:5px 0;
+}
+
+/* buttons */
+
+.doctor-action-buttons{
+margin-top:10px;
+}
+
+.approve-btn{
+background:#10b981;
+color:white;
+border:none;
+padding:8px 14px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.reject-btn{
+background:#ef4444;
+color:white;
+border:none;
+padding:8px 14px;
+border-radius:6px;
+cursor:pointer;
+margin-left:10px;
+}
+
+.prescription-btn{
+background:#3b82f6;
+color:white;
+border:none;
+padding:8px 14px;
+border-radius:6px;
+margin-top:10px;
+cursor:pointer;
+}
+
+.prescription-note{
+font-size:12px;
+color:#6b7280;
+margin-top:6px;
+}
+
+/* status badges */
+
+.status-badge{
+padding:4px 10px;
+border-radius:6px;
+margin-left:6px;
+font-weight:bold;
+font-size:13px;
+}
+
+.status-badge.pending{
+background:#facc15;
+color:#000;
+}
+
+.status-badge.approved{
+background:#22c55e;
+color:white;
+}
+
+.status-badge.rejected{
+background:#ef4444;
+color:white;
+}
+
+/* responsive */
+
+@media(max-width:900px){
+.doctor-appointments-grid{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media(max-width:600px){
+.doctor-appointments-grid{
+grid-template-columns:1fr;
+}
+}
+/* Prescription given badge */
+
+.prescription-done{
+background:#22c55e;
+color:white;
+padding:6px 14px;
+border-radius:20px;
+font-size:13px;
+font-weight:600;
+display:inline-block;
+margin-top:8px;
+box-shadow:0 2px 6px rgba(0,0,0,0.15);
+}

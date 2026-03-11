@@ -1,0 +1,156 @@
+/* Container */
+
+.doctor-profile-container{
+padding:35px;
+background:#f4f8fb;
+min-height:100vh;
+}
+
+/* Title */
+
+.doctor-profile-title{
+font-size:28px;
+font-weight:600;
+margin-bottom:25px;
+color:#1e293b;
+}
+
+/* Profile card */
+
+.doctor-profile-card{
+background:white;
+max-width:420px;
+padding:30px;
+border-radius:16px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+border:1px solid #e5e7eb;
+text-align:center;
+}
+
+/* Header */
+
+.doctor-profile-header{
+display:flex;
+flex-direction:column;
+align-items:center;
+margin-bottom:20px;
+}
+
+/* Avatar */
+
+.doctor-avatar{
+width:90px;
+height:90px;
+margin-bottom:10px;
+}
+
+/* Doctor name */
+
+.doctor-profile-header h2{
+color:#1f2937;
+font-weight:600;
+}
+
+/* Details */
+
+.doctor-profile-details p{
+margin:8px 0;
+color:#374151;
+font-size:15px;
+}
+
+.doctor-profile-details span{
+font-weight:600;
+color:#111827;
+}
+
+/* Edit button */
+
+.doctor-edit-btn{
+margin-top:18px;
+padding:10px 18px;
+background:#2563eb;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:500;
+transition:0.2s;
+}
+
+.doctor-edit-btn:hover{
+background:#1d4ed8;
+}
+
+
+/* EDIT FORM */
+
+.doctor-edit-card{
+background:white;
+max-width:420px;
+padding:30px;
+border-radius:16px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+border:1px solid #e5e7eb;
+display:flex;
+flex-direction:column;
+}
+
+/* Labels */
+
+.doctor-edit-card label{
+font-size:14px;
+margin-top:10px;
+margin-bottom:4px;
+color:#374151;
+font-weight:500;
+}
+
+/* Inputs */
+
+.doctor-edit-card input{
+padding:10px;
+border-radius:8px;
+border:1px solid #d1d5db;
+outline:none;
+font-size:14px;
+}
+
+/* Buttons row */
+
+.doctor-edit-buttons{
+margin-top:18px;
+display:flex;
+gap:10px;
+}
+
+/* Save button */
+
+.doctor-save-btn{
+padding:10px 18px;
+background:#22c55e;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:500;
+}
+
+.doctor-save-btn:hover{
+background:#16a34a;
+}
+
+/* Cancel */
+
+.doctor-cancel-btn{
+padding:10px 18px;
+background:#ef4444;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+.doctor-cancel-btn:hover{
+background:#dc2626;
+}

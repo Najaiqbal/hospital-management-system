@@ -1,0 +1,94 @@
+
+/* Page container */
+
+.patient-prescription-container{
+padding:35px;
+background:#f5f7fb;
+min-height:100vh;
+}
+
+
+/* Title */
+
+.patient-prescription-title{
+font-size:28px;
+font-weight:600;
+margin-bottom:25px;
+color:#1f2937;
+}
+
+
+/* Grid */
+
+.patient-prescription-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+
+/* Prescription card */
+
+.patient-prescription-card{
+background:white;
+border-radius:14px;
+padding:22px;
+border:1px solid #e5e7eb;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+transition:0.25s;
+}
+
+.patient-prescription-card:hover{
+transform:translateY(-5px);
+box-shadow:0 15px 35px rgba(0,0,0,0.12);
+}
+
+
+/* Doctor name */
+
+.patient-prescription-card h3{
+margin-bottom:12px;
+color:#2563eb;
+font-size:18px;
+}
+
+
+/* Prescription details */
+
+.prescription-info p{
+margin:6px 0;
+font-size:14px;
+color:#374151;
+}
+
+.prescription-info span{
+font-weight:600;
+color:#111827;
+}
+
+
+/* Empty message */
+
+.no-prescription{
+font-size:16px;
+color:#6b7280;
+}
+
+
+/* Responsive */
+
+@media (max-width:900px){
+
+.patient-prescription-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media (max-width:600px){
+
+.patient-prescription-grid{
+grid-template-columns:1fr;
+}
+
+}
