@@ -1,0 +1,63 @@
+/* dark background when popup opens */
+.prescription-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.4);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+/* form card */
+.appointment-container{
+  width: 420px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* title */
+.appointment-container h2{
+  text-align: center;
+}
+
+/* inputs vertical */
+.appointment-container input,
+.appointment-container textarea{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* textarea height */
+.appointment-container textarea{
+  height: 80px;
+}
+
+/* button */
+.appointment-container button{
+  background: #0d6efd;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.appointment-container button:hover{
+  background: #084298;
+}

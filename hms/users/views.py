@@ -23,7 +23,6 @@ class RegisterView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-
 class LoginView(APIView):
 
     def post(self, request):
@@ -35,7 +34,7 @@ class LoginView(APIView):
 
         if user:
 
-            # If user is a doctor
+            # Doctor login
             if Doctor.objects.filter(user=user).exists():
 
                 doctor = Doctor.objects.get(user=user)
@@ -46,8 +45,7 @@ class LoginView(APIView):
                     "role": "doctor"
                 })
 
-
-            # If user is a patient
+            # Patient login
             elif Patient.objects.filter(user=user).exists():
 
                 patient = Patient.objects.get(user=user)
@@ -58,6 +56,13 @@ class LoginView(APIView):
                     "role": "patient"
                 })
 
+            # Admin login
+            elif user.is_staff:
+
+                return Response({
+                    "user_id": user.id,
+                    "role": "admin"
+                })
 
         return Response(
             {"error": "Invalid credentials"},

@@ -23,15 +23,28 @@ function Login({ setUser, setPage }) {
       // save logged in user
       localStorage.setItem("user_id", res.data.user_id)
 
-if(res.data.role === "doctor"){
-localStorage.setItem("doctor_id", res.data.doctor_id)
-}
+      if(res.data.role === "doctor"){
+        localStorage.setItem("doctor_id", res.data.doctor_id)
+      }
 
-if(res.data.role === "patient"){
-localStorage.setItem("patient_id", res.data.patient_id)
-}
+      if(res.data.role === "patient"){
+        localStorage.setItem("patient_id", res.data.patient_id)
+      }
 
       setUser(res.data)
+
+      // open correct dashboard
+      if(res.data.role === "doctor"){
+        setPage("doctor")
+      }
+
+      else if(res.data.role === "patient"){
+        setPage("patient")
+      }
+
+      else if(res.data.role === "admin"){
+        setPage("admin")
+      }
 
     }catch(err){
 
