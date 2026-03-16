@@ -15,13 +15,11 @@ const [page,setPage] = useState("login")
 // not logged in
 if(!user){
 
-  if(page === "login"){
-    return <Login setUser={setUser} setPage={setPage}/>
-  }
-
   if(page === "register"){
     return <Register setPage={setPage}/>
   }
+
+  return <Login setUser={setUser} setPage={setPage}/>
 
 }
 

@@ -10,7 +10,6 @@ background:linear-gradient(135deg,#eef2ff,#f8fafc);
 font-family:Arial, Helvetica, sans-serif;
 }
 
-
 /* Title */
 
 .patient-profile-container h2{
@@ -18,13 +17,14 @@ font-size:30px;
 font-weight:700;
 margin-bottom:30px;
 color:#1e293b;
+text-align:center;
 }
-
 
 /* Profile card */
 
 .patient-profile-card{
-width:420px;
+width:100%;
+max-width:420px;
 background:white;
 padding:30px;
 border-radius:16px;
@@ -33,7 +33,6 @@ border:1px solid #e5e7eb;
 transition:all 0.3s ease;
 position:relative;
 }
-
 
 /* top gradient strip */
 
@@ -48,14 +47,12 @@ background:linear-gradient(90deg,#6366f1,#22c55e);
 border-radius:16px 16px 0 0;
 }
 
-
 /* hover effect */
 
 .patient-profile-card:hover{
 transform:translateY(-6px);
 box-shadow:0 18px 45px rgba(0,0,0,0.12);
 }
-
 
 /* Text info */
 
@@ -69,7 +66,6 @@ margin:10px 0;
 color:#475569;
 font-size:15px;
 }
-
 
 /* Input fields */
 
@@ -89,7 +85,6 @@ border-color:#6366f1;
 box-shadow:0 0 0 2px rgba(99,102,241,0.15);
 }
 
-
 /* Labels */
 
 .patient-profile-card label{
@@ -99,8 +94,7 @@ margin-bottom:4px;
 display:block;
 }
 
-
-/* Edit button */
+/* Buttons */
 
 .patient-edit-btn{
 margin-top:15px;
@@ -118,9 +112,6 @@ transition:0.2s;
 background:#4f46e5;
 }
 
-
-/* Save button */
-
 .patient-save-btn{
 margin-top:12px;
 padding:10px 18px;
@@ -137,9 +128,6 @@ margin-right:10px;
 background:#059669;
 }
 
-
-/* Cancel button */
-
 .patient-cancel-btn{
 padding:10px 18px;
 background:#ef4444;
@@ -152,4 +140,43 @@ cursor:pointer;
 
 .patient-cancel-btn:hover{
 background:#dc2626;
+}
+
+/* Tablet */
+
+@media (max-width:768px){
+
+.patient-profile-container{
+padding:25px;
+}
+
+.patient-profile-card{
+padding:25px;
+}
+
+}
+
+/* Mobile */
+
+@media (max-width:480px){
+
+.patient-profile-container{
+padding:15px;
+}
+
+.patient-profile-container h2{
+font-size:24px;
+}
+
+.patient-profile-card{
+padding:20px;
+}
+
+.patient-save-btn,
+.patient-cancel-btn,
+.patient-edit-btn{
+width:100%;
+margin-bottom:10px;
+}
+
 }

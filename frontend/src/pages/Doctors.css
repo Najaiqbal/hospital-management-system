@@ -4,6 +4,8 @@
 padding:35px;
 background:#f5f7fb;
 min-height:100vh;
+width:100%;
+box-sizing:border-box;
 }
 
 /* Title */
@@ -13,6 +15,7 @@ font-size:30px;
 font-weight:600;
 margin-bottom:30px;
 color:#1f2937;
+text-align:left;
 }
 
 /* Grid */
@@ -21,6 +24,7 @@ color:#1f2937;
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:25px;
+width:100%;
 }
 
 
@@ -113,9 +117,9 @@ background:#0f172a;
 }
 
 
-/* Responsive */
+/* Tablet */
 
-@media (max-width:900px){
+@media (max-width:1000px){
 
 .doctor-grid{
 grid-template-columns:repeat(2,1fr);
@@ -123,10 +127,27 @@ grid-template-columns:repeat(2,1fr);
 
 }
 
+
+/* Mobile */
+
 @media (max-width:600px){
+
+.doctors-container{
+padding:15px;
+}
+
+.doctors-title{
+font-size:22px;
+text-align:center;
+}
 
 .doctor-grid{
 grid-template-columns:1fr;
+gap:18px;
+}
+
+.doctor-card{
+padding:22px;
 }
 
 }

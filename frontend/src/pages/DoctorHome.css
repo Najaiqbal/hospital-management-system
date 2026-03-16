@@ -2,6 +2,8 @@
 
 .doctor-dashboard-container{
 padding:30px;
+width:100%;
+box-sizing:border-box;
 }
 
 .doctor-dashboard-title{
@@ -16,6 +18,7 @@ color:#1f2937;
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:25px;
+width:100%;
 }
 
 /* Card */
@@ -61,16 +64,40 @@ background:#3b82f6;
 color:white;
 }
 
-/* Responsive */
+/* Tablet */
 
-@media(max-width:900px){
+@media(max-width:1000px){
+
 .doctor-dashboard-cards{
 grid-template-columns:repeat(2,1fr);
 }
+
 }
 
+/* Mobile */
+
 @media(max-width:600px){
+
+.doctor-dashboard-container{
+padding:15px;
+}
+
+.doctor-dashboard-title{
+font-size:22px;
+text-align:center;
+}
+
 .doctor-dashboard-cards{
 grid-template-columns:1fr;
+gap:15px;
 }
+
+.doctor-stat-card{
+padding:20px;
+}
+
+.doctor-stat-card p{
+font-size:24px;
+}
+
 }

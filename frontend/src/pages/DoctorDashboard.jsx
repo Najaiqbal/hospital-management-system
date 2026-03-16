@@ -10,7 +10,9 @@ function DoctorDashboard({ user, setUser }) {
 const [page,setPage] = useState("dashboard")
 
 const logout = ()=>{
+localStorage.clear()
 setUser(null)
+window.location.reload()
 }
 
 return(
@@ -22,30 +24,21 @@ return(
 <h2>Doctor Panel</h2>
 
 <ul>
-
 <li onClick={()=>setPage("dashboard")}>🏠 Dashboard</li>
-
 <li onClick={()=>setPage("profile")}>👨‍⚕️ My Profile</li>
-
 <li onClick={()=>setPage("appointments")}>📅 Appointments</li>
-
 <li onClick={()=>setPage("prescriptions")}>💊 Prescriptions</li>
-
 </ul>
 
 <button onClick={logout}>Logout</button>
 
 </div>
 
-
 <div className="dashboard-content">
 
 {page==="dashboard" && <DoctorHome/>}
-
 {page==="profile" && <DoctorProfile/>}
-
 {page==="appointments" && <DoctorAppointments/>}
-
 {page==="prescriptions" && <DoctorPrescriptions/>}
 
 </div>

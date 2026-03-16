@@ -11,12 +11,14 @@
   justify-content: center;
   align-items: center;
 
+  padding: 20px;
   z-index: 1000;
 }
 
 /* form card */
 .appointment-container{
   width: 420px;
+  max-width: 100%;
   background: white;
   padding: 30px;
   border-radius: 10px;
@@ -33,7 +35,7 @@
   text-align: center;
 }
 
-/* inputs vertical */
+/* inputs */
 .appointment-container input,
 .appointment-container textarea{
   width: 100%;
@@ -60,4 +62,24 @@
 
 .appointment-container button:hover{
   background: #084298;
+}
+
+/* ---------- MOBILE RESPONSIVE ---------- */
+
+@media (max-width:768px){
+
+  .appointment-container{
+    width:100%;
+    padding:20px;
+  }
+
+  .appointment-container h2{
+    font-size:20px;
+  }
+
+  .appointment-container input,
+  .appointment-container textarea{
+    font-size:14px;
+  }
+
 }

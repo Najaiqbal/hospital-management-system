@@ -32,6 +32,7 @@ padding:22px;
 border:1px solid #e5e7eb;
 box-shadow:0 8px 20px rgba(0,0,0,0.08);
 transition:0.25s;
+width:100%;
 }
 
 .patient-appointment-card:hover{
@@ -44,6 +45,7 @@ box-shadow:0 15px 35px rgba(0,0,0,0.12);
 .patient-appointment-card h3{
 color:#2563eb;
 margin-bottom:12px;
+font-size:20px;
 }
 
 /* Info */
@@ -88,20 +90,40 @@ font-size:16px;
 color:#6b7280;
 }
 
-/* Responsive */
+/* Tablet */
 
 @media (max-width:900px){
 
+.patient-appointments-container{
+padding:25px;
+}
+
 .patient-appointments-grid{
 grid-template-columns:repeat(2,1fr);
+gap:20px;
 }
 
 }
+
+/* Mobile */
 
 @media (max-width:600px){
 
+.patient-appointments-container{
+padding:15px;
+}
+
+.patient-appointments-title{
+font-size:22px;
+}
+
 .patient-appointments-grid{
 grid-template-columns:1fr;
+gap:15px;
+}
+
+.patient-appointment-card{
+padding:18px;
 }
 
 }

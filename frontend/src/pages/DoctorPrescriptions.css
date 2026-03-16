@@ -4,6 +4,8 @@
 padding:30px;
 background:#f4f8fb;
 min-height:100vh;
+width:100%;
+box-sizing:border-box;
 }
 
 /* Title */
@@ -21,6 +23,7 @@ color:#1e293b;
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:25px;
+width:100%;
 }
 
 /* Prescription card */
@@ -75,9 +78,9 @@ font-size:16px;
 color:#6b7280;
 }
 
-/* Responsive */
+/* Tablet */
 
-@media (max-width:900px){
+@media (max-width:1000px){
 
 .doctor-prescription-grid{
 grid-template-columns:repeat(2,1fr);
@@ -85,10 +88,26 @@ grid-template-columns:repeat(2,1fr);
 
 }
 
+/* Mobile */
+
 @media (max-width:600px){
+
+.doctor-prescription-container{
+padding:15px;
+}
+
+.doctor-prescription-title{
+font-size:22px;
+text-align:center;
+}
 
 .doctor-prescription-grid{
 grid-template-columns:1fr;
+gap:15px;
+}
+
+.doctor-prescription-card{
+padding:18px;
 }
 
 }

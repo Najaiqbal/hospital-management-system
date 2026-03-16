@@ -1,5 +1,7 @@
 import { useState } from "react"
 import axios from "axios"
+import "./Register.css"
+<h2>🩺 CareConnect Registration</h2>
 
 function Register({ setPage }) {
 
@@ -76,7 +78,7 @@ const register = async () => {
 
       <div className="login-box">
 
-        <h2>Register</h2>
+       <h2>🩺 CareConnect Registration</h2>
 
         <select
         value={role}

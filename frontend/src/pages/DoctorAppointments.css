@@ -1,12 +1,21 @@
+/* Container */
+
 .doctor-appointments-container{
 padding:30px;
+max-width:1200px;
+margin:auto;
 }
+
+/* Title */
 
 .doctor-appointments-title{
 font-size:28px;
 margin-bottom:25px;
 color:#1f2937;
+text-align:left;
 }
+
+/* Grid */
 
 .doctor-appointments-grid{
 display:grid;
@@ -14,7 +23,7 @@ grid-template-columns:repeat(3,1fr);
 gap:25px;
 }
 
-/* card */
+/* Card */
 
 .doctor-appointment-card{
 background:white;
@@ -38,10 +47,13 @@ margin-bottom:10px;
 margin:5px 0;
 }
 
-/* buttons */
+/* Buttons */
 
 .doctor-action-buttons{
 margin-top:10px;
+display:flex;
+flex-wrap:wrap;
+gap:10px;
 }
 
 .approve-btn{
@@ -60,7 +72,6 @@ border:none;
 padding:8px 14px;
 border-radius:6px;
 cursor:pointer;
-margin-left:10px;
 }
 
 .prescription-btn{
@@ -69,7 +80,6 @@ color:white;
 border:none;
 padding:8px 14px;
 border-radius:6px;
-margin-top:10px;
 cursor:pointer;
 }
 
@@ -79,7 +89,7 @@ color:#6b7280;
 margin-top:6px;
 }
 
-/* status badges */
+/* Status badges */
 
 .status-badge{
 padding:4px 10px;
@@ -104,20 +114,7 @@ background:#ef4444;
 color:white;
 }
 
-/* responsive */
-
-@media(max-width:900px){
-.doctor-appointments-grid{
-grid-template-columns:repeat(2,1fr);
-}
-}
-
-@media(max-width:600px){
-.doctor-appointments-grid{
-grid-template-columns:1fr;
-}
-}
-/* Prescription given badge */
+/* Prescription badge */
 
 .prescription-done{
 background:#22c55e;
@@ -129,4 +126,49 @@ font-weight:600;
 display:inline-block;
 margin-top:8px;
 box-shadow:0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+/* Tablet */
+
+@media(max-width:900px){
+
+.doctor-appointments-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:600px){
+
+.doctor-appointments-container{
+padding:20px;
+}
+
+.doctor-appointments-title{
+text-align:center;
+font-size:24px;
+}
+
+.doctor-appointments-grid{
+grid-template-columns:1fr;
+}
+
+.doctor-appointment-card{
+padding:18px;
+}
+
+.doctor-action-buttons{
+flex-direction:column;
+}
+
+.approve-btn,
+.reject-btn,
+.prescription-btn{
+width:100%;
+}
+
 }

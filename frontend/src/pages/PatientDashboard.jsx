@@ -70,11 +70,11 @@ console.log(err)
 
 },[])
 
-
 const logout = ()=>{
+localStorage.clear()
 setUser(null)
+window.location.reload()
 }
-
 
 return(
 

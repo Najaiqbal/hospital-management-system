@@ -13,11 +13,13 @@ background:#f4f8fb;
 width:230px;
 background:#1e293b;
 color:white;
-padding:25px 15px;
-position:fixed;
-top:0;
-left:0;
+padding:20px;
 height:100vh;
+position:fixed;
+left:0;
+top:0;
+display:flex;
+flex-direction:column;
 }
 
 .sidebar h2{
@@ -28,10 +30,11 @@ margin-bottom:30px;
 .sidebar ul{
 list-style:none;
 padding:0;
+flex:1;
 }
 
 .sidebar ul li{
-padding:12px 15px;
+padding:12px;
 margin-bottom:10px;
 border-radius:8px;
 cursor:pointer;
@@ -43,11 +46,11 @@ background:#334155;
 }
 
 .sidebar button{
-margin-top:20px;
+margin-top:10px;
 width:100%;
 padding:10px;
 border:none;
-border-radius:8px;
+border-radius:6px;
 background:#ef4444;
 color:white;
 cursor:pointer;
@@ -56,166 +59,117 @@ cursor:pointer;
 /* Content */
 
 .dashboard-content{
-margin-left:240px;
+margin-left:230px;
 padding:30px;
 flex:1;
 }
 
-/* DASHBOARD STAT CARDS */
+/* Stats cards */
 
 .stats-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:25px;
-margin-top:25px;
+gap:20px;
 }
 
 .stat-card{
+background:white;
 padding:25px;
 border-radius:12px;
-color:white;
-font-size:20px;
-font-weight:bold;
+box-shadow:0 6px 15px rgba(0,0,0,0.08);
+font-size:18px;
+font-weight:600;
 text-align:center;
+transition:0.25s;
 }
 
-/* different colors */
+.stat-card:hover{
+transform:translateY(-4px);
+}
+
+/* Different card colors */
 
 .stat-card.appointments{
-background:#2563eb;
+border-left:5px solid #3b82f6;
 }
 
 .stat-card.doctors{
-background:#16a34a;
+border-left:5px solid #10b981;
 }
 
 .stat-card.prescriptions{
-background:#9333ea;
+border-left:5px solid #f59e0b;
 }
 
-/* NORMAL CARDS (appointments, doctors etc) */
-
-.card{
-background:white;
-padding:20px;
-border-radius:12px;
-border:1px solid #e5e7eb;
-box-shadow:0 4px 12px rgba(0,0,0,0.08);
-transition:0.2s;
-text-align:left;
-}
-
-.card:hover{
-transform:translateY(-4px);
-box-shadow:0 10px 20px rgba(0,0,0,0.12);
-}
-
-.card h3{
-margin-bottom:10px;
-font-size:18px;
-color:#111827;
-}
-
-.card p{
-font-size:14px;
-color:#555;
-margin:6px 0;
-}
-
-/* Buttons */
-
-.card button{
-margin-top:10px;
-padding:8px 15px;
-border:none;
-border-radius:6px;
-background:#2563eb;
-color:white;
-cursor:pointer;
-}
-
-.card button:hover{
-background:#1d4ed8;
-}
-
-/* Doctor Cards */
+/* Doctor cards grid */
 
 .doctor-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:25px;
-margin-top:30px;
+gap:20px;
 }
 
-.doctor-card{
-background:white;
-padding:20px;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+/* Tablet */
+
+@media(max-width:1000px){
+
+.stats-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.doctor-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.dashboard-container{
+flex-direction:column;
+}
+
+/* Sidebar becomes top menu */
+
+.sidebar{
+position:relative;
+width:100%;
+height:auto;
+flex-direction:column;
+align-items:center;
+}
+
+.sidebar ul{
+width:100%;
 text-align:center;
 }
 
-.doctor-card img{
-width:80px;
-margin-bottom:10px;
+.sidebar ul li{
+margin:6px 0;
 }
 
-.doctor-card button{
-margin-top:10px;
-padding:10px;
-background:#2563eb;
-color:white;
-border:none;
-border-radius:6px;
-cursor:pointer;
+/* Content */
+
+.dashboard-content{
+margin-left:0;
+padding:20px;
 }
 
-/* Responsive */
-
-@media(max-width:900px){
-
-.cards{
-grid-template-columns:repeat(2,1fr);
-}
-
-.stats-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-@media(max-width:600px){
-
-.cards{
-grid-template-columns:1fr;
-}
+/* Cards */
 
 .stats-grid{
 grid-template-columns:1fr;
 }
 
+.doctor-grid{
+grid-template-columns:1fr;
 }
 
-
-.status{
-padding:4px 10px;
-border-radius:6px;
-font-size:12px;
-font-weight:600;
-display:inline-block;
+.stat-card{
+padding:20px;
+font-size:16px;
 }
 
-.status.pending{
-background:#fef3c7;
-color:#92400e;
-}
-
-.status.approved{
-background:#dcfce7;
-color:#166534;
-}
-
-.status.rejected{
-background:#fee2e2;
-color:#991b1b;
 }
