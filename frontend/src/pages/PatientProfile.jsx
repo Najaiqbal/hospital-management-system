@@ -16,8 +16,7 @@ const [phone,setPhone] = useState("")
 useEffect(()=>{
 
 const patient_id = localStorage.getItem("patient_id")
-
-axios.get(`http://127.0.0.1:8000/api/patients/${patient_id}/`)
+axios.get(`https://hospital-management-system-d5wx.onrender.com/api/patients/${patient_id}/`)
 .then(res=>{
 
 setPatient(res.data)
@@ -35,7 +34,7 @@ const updateProfile = ()=>{
 
 const patient_id = localStorage.getItem("patient_id")
 
-axios.patch(`http://127.0.0.1:8000/api/patients/${patient_id}/`,{
+axios.patch(`https://hospital-management-system-d5wx.onrender.com/api/patients/${patient_id}/`,{
 
 age:age,
 gender:gender,

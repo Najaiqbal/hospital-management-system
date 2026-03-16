@@ -12,7 +12,7 @@ function BookAppointment({ doctor }) {
 
   useEffect(()=>{
 
-    axios.get("http://127.0.0.1:8000/api/doctors/")
+    axios.get("https://hospital-management-system-d5wx.onrender.com/api/doctors/")
     .then(res=>{
       setDoctors(res.data)
     })
@@ -33,7 +33,7 @@ function BookAppointment({ doctor }) {
       return
     }
 
-    axios.post("http://127.0.0.1:8000/api/appointments/",{
+    axios.post("https://hospital-management-system-d5wx.onrender.com/api/appointments/",{
       doctor:selectedDoctor.id,
       patient:parseInt(patient_id),
       date:date,

@@ -10,7 +10,8 @@ function MyAppointments() {
 
     const patient_id = parseInt(localStorage.getItem("patient_id"))
 
-    axios.get("http://127.0.0.1:8000/api/appointments/")
+   
+    axios.get("https://hospital-management-system-d5wx.onrender.com/api/appointments/")
     .then(res=>{
 
       const myAppointments = res.data.filter(

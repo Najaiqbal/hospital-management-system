@@ -8,7 +8,7 @@ const [doctors,setDoctors] = useState([])
 
 useEffect(()=>{
 
-axios.get("http://127.0.0.1:8000/api/doctors/")
+axios.get("https://hospital-management-system-d5wx.onrender.com/api/doctors/")
 .then(res=>{
 setDoctors(res.data)
 })

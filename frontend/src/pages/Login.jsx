@@ -12,7 +12,8 @@ const login = async () => {
 try{
 
 const res = await axios.post(
-"http://127.0.0.1:8000/api/users/login/",
+
+"https://hospital-management-system-d5wx.onrender.com/api/users/login/",
 {
 username: username,
 password: password

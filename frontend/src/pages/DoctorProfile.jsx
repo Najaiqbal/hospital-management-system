@@ -15,7 +15,7 @@ useEffect(()=>{
 
 const doctor_id = localStorage.getItem("doctor_id")
 
-axios.get(`http://127.0.0.1:8000/api/doctors/${doctor_id}/`)
+axios.get(`https://hospital-management-system-d5wx.onrender.com/api/doctors/${doctor_id}/`)
 .then(res=>{
 
 setDoctor(res.data)
@@ -32,7 +32,7 @@ const updateProfile = ()=>{
 
 const doctor_id = localStorage.getItem("doctor_id")
 
-axios.patch(`http://127.0.0.1:8000/api/doctors/${doctor_id}/`,{
+axios.patch(`https://hospital-management-system-d5wx.onrender.com/api/doctors/${doctor_id}/`,{
 
 name:name,
 specialization:specialization,

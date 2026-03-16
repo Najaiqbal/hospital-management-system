@@ -10,7 +10,7 @@ useEffect(()=>{
 
 const patient_id = parseInt(localStorage.getItem("patient_id"))
 
-axios.get("http://127.0.0.1:8000/api/prescriptions/")
+axios.get("https://hospital-management-system-d5wx.onrender.com/api/prescriptions/")
 .then(res=>{
 
 const myPrescriptions = res.data.filter(

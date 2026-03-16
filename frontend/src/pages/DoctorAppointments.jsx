@@ -13,7 +13,7 @@ useEffect(()=>{
 
 const doctor_id = localStorage.getItem("doctor_id")
 
-axios.get("http://127.0.0.1:8000/api/appointments/")
+axios.get("https://hospital-management-system-d5wx.onrender.com/api/appointments/")
 .then(res=>{
 
 const myAppointments = res.data
@@ -29,7 +29,7 @@ setAppointments(myAppointments)
 
 const updateStatus = (id,status)=>{
 
-axios.patch(`http://127.0.0.1:8000/api/appointments/${id}/`,{
+axios.patch(`https://hospital-management-system-d5wx.onrender.com/api/appointments/${id}/`,{
 status:status
 })
 

@@ -10,7 +10,7 @@ const [notes,setNotes] = useState("")
 
 const savePrescription = ()=>{
 
-axios.post("http://127.0.0.1:8000/api/prescriptions/",{
+axios.post("https://hospital-management-system-d5wx.onrender.com/api/prescriptions/",{
 
 doctor:appointment.doctor,
 patient:appointment.patient,

@@ -23,7 +23,7 @@ const patient_id = parseInt(localStorage.getItem("patient_id"))
 
 /* Appointments count */
 
-axios.get("http://127.0.0.1:8000/api/appointments/")
+axios.get("https://hospital-management-system-d5wx.onrender.com/api/appointments/")
 .then(res=>{
 
 const myAppointments = res.data.filter(
@@ -41,7 +41,7 @@ console.log(err)
 
 /* Doctors count */
 
-axios.get("http://127.0.0.1:8000/api/doctors/")
+axios.get("https://hospital-management-system-d5wx.onrender.com/api/doctors/")
 .then(res=>{
 setDoctorsCount(res.data.length)
 })
@@ -53,7 +53,7 @@ console.log(err)
 
 /* Prescriptions count */
 
-axios.get("http://127.0.0.1:8000/api/prescriptions/")
+axios.get("https://hospital-management-system-d5wx.onrender.com/api/prescriptions/")
 .then(res=>{
 
 const myPrescriptions = res.data.filter(
